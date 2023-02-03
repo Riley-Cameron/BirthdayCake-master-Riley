@@ -94,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginRight="3dp"
+                android:onClick="goodbye"
                 android:text="Goodbye"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
