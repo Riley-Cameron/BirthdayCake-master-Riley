@@ -50,8 +50,10 @@
             <SeekBar
                 android:id="@+id/seekBar2"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
-                android:layout_height="wrap_content" />
+                android:max="5"
+                android:progress="2" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,7 +68,8 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:layout_weight="0"
+                android:layout_weight="1"
+                android:checked="true"
                 android:text="Candles" />
 
             <Switch
@@ -75,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_weight="1"
+                android:checked="true"
                 android:text="Frosting" />
         </LinearLayout>
 
