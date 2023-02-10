@@ -17,6 +17,8 @@ public class CakeView extends SurfaceView {
     Paint innerFlamePaint = new Paint();
     Paint wickPaint = new Paint();
 
+    private CakeModel model;
+
     /* These constants define the dimensions of the cake.  While defining constants for things
         like this is good practice, we could be calculating these better by detecting
         and adapting to different tablets' screen sizes and resolutions.  I've deliberately
@@ -43,6 +45,7 @@ public class CakeView extends SurfaceView {
     public CakeView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
+        model = new CakeModel();
         //This is essential or your onDraw method won't get called
         setWillNotDraw(false);
 
@@ -62,6 +65,10 @@ public class CakeView extends SurfaceView {
 
         setBackgroundColor(Color.WHITE);  //better than black default
 
+    }
+
+    public CakeModel getModel() {
+        return model;
     }
 
     /**
