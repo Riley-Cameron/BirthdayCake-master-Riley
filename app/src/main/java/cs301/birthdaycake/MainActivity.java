@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,11 +15,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_main);
+
         CakeView view = findViewById(R.id.cakeview);
         CakeController controller = new CakeController(view);
         Log.i("constructor", "initialized");
+
         Button blowOut = findViewById(R.id.blow_out);
         blowOut.setOnClickListener(controller);
+
+        Switch candleSwitch = findViewById(R.id.candles);
+        candleSwitch.setOnCheckedChangeListener(controller);
     }
 
     public void goodbye(View button) {
